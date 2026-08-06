@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Utility Grades — Project Watershed</title>
+<meta name="description" content="The Annual Water Loss Report Card grades U.S. water utilities A through F on how much water they lose. Look up your utility, coming soon.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Roboto+Mono:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="stylesheet" href="css/styles.css">
+<style>
+  .proof-stamps {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+  }
+  .proof-stamps .grade-stamp-static {
+    position: relative;
+    width: 110px;
+    height: 110px;
+    flex-shrink: 0;
+  }
+  .proof-stamps .grade-stamp-static .grade-stamp { transform: rotate(-8deg); }
+  .proof-stamps .grade-stamp-static span {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 2.6rem;
+    color: var(--paper);
+    transform: rotate(-8deg);
+  }
+  .proof-stamps__arrow {
+    font-family: var(--font-mono);
+    font-size: 1.6rem;
+    color: var(--cyanotype-light);
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a href="index.html" class="site-logo" aria-label="Project Watershed home">
+      <img class="site-logo__mark" src="assets/logo-mark.png" alt="" aria-hidden="true">
+      <span class="site-logo__text">Project<br>Watershed</span>
+    </a>
+    <div class="site-header__right">
+      <nav class="site-nav" id="primary-nav" data-nav aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="our-story.html">Our Story</a></li>
+        <li><a href="the-problem.html">The Problem</a></li>
+        <li><a href="utility-grades.html" aria-current="page">Utility Grades</a></li>
+        <li><a href="get-involved.html">Get Involved</a></li>
+      </ul>
+    </nav>
+      <a href="get-involved.html#start-chapter" class="header-cta">Start a Chapter</a>
+      <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="primary-nav">
+      <span class="nav-toggle__bar"></span><span class="nav-toggle__bar"></span><span class="nav-toggle__bar"></span>
+      <span class="visually-hidden">Menu</span>
+    </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- What the report card is -->
+  <section class="section section--paper" style="padding-top:clamp(64px,10vw,120px);">
+    <div class="wrap" data-reveal style="max-width:820px;">
+      <p class="eyebrow">Utility Grades</p>
+      <h1 style="margin-top:10px;">The Annual Water Loss Report Card</h1>
+
+      <p style="margin-top:22px; font-size:1.08rem;">Every year, Project Watershed will publish grades for water utilities across the country, A through F, benchmarked against peer utilities of similar size and geography. Each utility's entry includes its water loss percentage, the dollar cost per household, its trend over time, and its rank among peers.</p>
+
+      <div class="status-marker">
+        <span class="status-marker__dot"></span>
+        Status: building the first report card now, starting with New Jersey as a proof of concept, expanding state by state.
+      </div>
+    </div>
+  </section>
+
+  <!-- Proof the model works -->
+  <section class="section section--blueprint">
+    <div class="contour-field" aria-hidden="true"></div>
+    <div class="wrap" data-reveal style="max-width:820px;">
+      <p class="eyebrow">Proof</p>
+      <h2>We know this works because it's already been done</h2>
+
+      <p style="margin-top:22px; font-size:1.08rem;">In Wisconsin, a university researcher built a similar report card grading 570 utilities on performance, A through F. It generated real press coverage, local government attention, and measurable accountability pressure.</p>
+
+      <p style="margin-top:18px; font-size:1.08rem;">In one documented case, Clinton Village's water utility received a D for infrastructure due to major water leaks that had gone unfixed for two years. Once the grade was published and the pressure mounted, the utility acted. The fixes cost just $3,000. Water loss dropped from 36% to 9%.</p>
+
+      <div class="proof-stamps" aria-hidden="true">
+        <div class="grade-stamp-static">
+          <div class="grade-stamp"></div>
+          <span>D</span>
+        </div>
+        <span class="proof-stamps__arrow">&rarr;</span>
+        <div class="grade-stamp-static">
+          <div class="grade-stamp grade-stamp--green"></div>
+          <span>9%</span>
+        </div>
+      </div>
+
+      <div class="proof-banner">One grade. Public pressure. $3,000 in repairs. Water loss cut by more than half.</div>
+    </div>
+  </section>
+
+  <!-- Look up your utility -->
+  <section class="section section--paper">
+    <div class="wrap" data-reveal style="max-width:640px;">
+      <p class="eyebrow">Coming Soon</p>
+      <h2>Look up your utility</h2>
+      <p style="margin-top:16px; font-size:1.05rem;">Soon, you'll be able to search any U.S. water utility by zip code or name and see its grade instantly. That tool is in progress.</p>
+
+      <div class="form-panel" style="margin-top:28px;">
+        <h3>Be the first to see your utility's grade</h3>
+        <p style="margin-top:8px; font-size:0.94rem;">We'll email you the day the first Report Card publishes.</p>
+        <form data-signup-form novalidate>
+          <div class="form-row">
+            <div class="form-field" style="flex:1 1 100%;">
+              <label for="grades-email">Email address</label>
+              <input type="email" id="grades-email" name="email" placeholder="you@school.edu" required>
+            </div>
+          </div>
+          <button type="submit" class="btn btn--primary">Notify Me</button>
+          <p class="form-success" data-form-success hidden>You're on the list. We'll email you the day it launches.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap site-footer__inner">
+    <div class="site-footer__top">
+      <p class="site-footer__tagline"><strong>watershed</strong> (n): the land that feeds a river. a turning point. our mission.</p>
+      <form class="footer-signup" data-signup-form novalidate>
+        <label for="footer-email" class="visually-hidden">Email address</label>
+        <input type="email" id="footer-email" name="email" placeholder="you@school.edu" required>
+        <button type="submit">Notify Me</button>
+        <p class="form-success" data-form-success hidden>You're on the list.</p>
+      </form>
+    </div>
+    <div class="site-footer__cta-row">
+      <a href="https://instagram.com/project.watershed" target="_blank" rel="noopener" class="footer-cta-link">Instagram</a>
+      <a href="get-involved.html#start-chapter" class="footer-cta-link footer-cta-link--accent">Start a Chapter</a>
+    </div>
+    <p class="site-footer__copyright">© 2026 Project Watershed. A student-founded nonprofit.</p>
+  </div>
+</footer>
+
+<div class="pip-widget" data-pip-widget>
+  <button type="button" class="pip-widget__btn" data-pip-btn aria-haspopup="true" aria-expanded="false" aria-controls="pip-panel">
+    <img data-pip-img src="assets/pip/pip-thumbsup.png" alt="Pip, the Project Watershed mascot">
+  </button>
+  <div class="pip-widget__panel" data-pip-panel id="pip-panel" role="dialog" aria-label="Water loss fun fact">
+    <div class="pip-widget__panel-head">
+      <span class="pip-widget__label">Pip says</span>
+      <button type="button" class="pip-widget__close" data-pip-close aria-label="Close">&times;</button>
+    </div>
+    <p class="pip-widget__fact" data-pip-fact></p>
+    <button type="button" class="pip-widget__next" data-pip-next>Another fact</button>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
